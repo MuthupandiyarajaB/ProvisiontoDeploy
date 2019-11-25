@@ -1,0 +1,10 @@
+---
+- hosts: host1
+  remote_user: testadmin
+  sudo: yes
+  sudo_user: azure-admin
+  gather_facts: no
+  tasks:
+  - name: Install nodejs
+    apt: name=nodejs state=present
+    become_user: root
