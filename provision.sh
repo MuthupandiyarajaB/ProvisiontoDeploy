@@ -10,7 +10,7 @@ export ARM_CLIENT_ID=$1
 export ARM_CLIENT_SECRET=$2
 export ARM_SUBSCRIPTION_ID=$3
 export ARM_TENANT_ID=$4
-terraform init -from-module=/home/vsts/work/r1/a/_Env-Soft-provision-CI/drop
+terraform init -from-module=MODULE-SOURCE
 # terraform plan -out plan.out
 # terraform apply -auto-approve plan.out
 
