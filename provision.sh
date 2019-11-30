@@ -3,14 +3,14 @@ https://www.terraform.io/downloads.html
 sudo apt-get install sshpass
 wget https://releases.hashicorp.com/terraform/0.12.7/terraform_0.12.7_linux_amd64.zip
 unzip terraform_0.12.7_linux_amd64.zip
-sudo mv terraform /usr/local/bin/
+sudo install terraform /usr/local/bin/
 terraform --version
 
 export ARM_CLIENT_ID=$1
 export ARM_CLIENT_SECRET=$2
 export ARM_SUBSCRIPTION_ID=$3
 export ARM_TENANT_ID=$4
-terraform init
+terraform init -from-module=/home/vsts/work/r1/a/_Env-Soft-provision-CI/drop
 # terraform plan -out plan.out
 # terraform apply -auto-approve plan.out
 
