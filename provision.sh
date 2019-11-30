@@ -6,6 +6,7 @@ unzip terraform_0.12.7_linux_amd64.zip
 sudo install terraform /usr/local/bin/
 terraform --version
 
+cd terraform
 export ARM_CLIENT_ID=$1
 export ARM_CLIENT_SECRET=$2
 export ARM_SUBSCRIPTION_ID=$3
