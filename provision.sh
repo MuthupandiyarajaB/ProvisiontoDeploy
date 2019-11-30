@@ -2,12 +2,14 @@ sudo apt-get install unzip
 sudo apt-get install sshpass
 wget https://releases.hashicorp.com/terraform/0.11.14/terraform_0.11.14_linux_amd64.zip
 unzip terraform_0.11.14_linux_amd64.zip
+sudo mv terraform /usr/local/bin/
+terraform --version
 
 export ARM_CLIENT_ID=$1
 export ARM_CLIENT_SECRET=$2
 export ARM_SUBSCRIPTION_ID=$3
 export ARM_TENANT_ID=$4
-terraform init $(System.DefaultWorkingDirectory)/_Env-Soft-provision-CI/drop/
+terraform init
 terraform plan -out plan.out
 terraform apply -auto-approve plan.out
 
