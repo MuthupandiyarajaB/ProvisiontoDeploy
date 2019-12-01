@@ -8,6 +8,7 @@ export ARM_CLIENT_ID=$1
 export ARM_CLIENT_SECRET=$2
 export ARM_SUBSCRIPTION_ID=$3
 export ARM_TENANT_ID=$4
+ls 
 terraform init
 # terraform plan -out plan.out
 # terraform apply -auto-approve plan.out
