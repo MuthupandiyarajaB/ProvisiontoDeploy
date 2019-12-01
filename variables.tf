@@ -1,10 +1,10 @@
 variable "prefix" {
-  default = "naomi"
+  default = "Muthu"
   description = "The Prefix used for all resources in this example"
 }
 
 variable "location" {
-  default = "South India"
+  default = "Central US"
   description = "The Azure Region in which the resources in this example should exist"
 }
 
