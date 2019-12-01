@@ -3,8 +3,6 @@ https://www.terraform.io/downloads.html
 sudo apt-get install sshpass
 wget https://releases.hashicorp.com/terraform/0.12.7/terraform_0.12.7_linux_amd64.zip
 unzip terraform_0.12.7_linux_amd64.zip
-sudo install terraform /usr/local/bin/
-terraform --version
 
 export ARM_CLIENT_ID=$1
 export ARM_CLIENT_SECRET=$2
