@@ -1,5 +1,6 @@
 ---
-- hosts: webservers
+- name: Create Apache Server
+  hosts: webservers
   remote_user: root
   sudo: yes
   sudo_user: azure-admin
@@ -12,7 +13,8 @@
     service: name=apache2 state=started
     become_user: root
   
-- hosts: dbservers
+- name: Create DB Server
+  hosts: dbservers
   remote_user: root
   sudo: yes
   sudo_user: azure-admin
