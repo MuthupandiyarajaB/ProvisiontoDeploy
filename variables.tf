@@ -1,5 +1,5 @@
 variable "prefix" {
-  default = "Muthu1"
+  default = "Muthu"
   description = "The Prefix used for all resources in this example"
 }
 

@@ -11,21 +11,21 @@
   - name: Install npm
     apt: name=npm state=present
     become_user: root
-  # - name: Install Http-server
-  #   shell: npm install http-server -g
+  - name: Install Http-server
+    shell: npm install http-server -g
+    become_user: root
+  - name: Straring Http-server
+    shell: http-server ~/Sonic/ &
+    become_user: root
+  # - name: Install Apache
+  #   apt: name=apache2 state=present
   #   become_user: root
-  # # - name: Straring Http-server
-  #   shell: http-server ~/Sonic/ &
+  # - name: Start Apache
+  #   service: name=apache2 state=started
   #   become_user: root
-  - name: Install Apache
-    apt: name=apache2 state=present
-    become_user: root
-  - name: Start Apache
-    service: name=apache2 state=started
-    become_user: root
-  - name: Install MySql
-    apt: name=mysql-server state=present
-    become_user: root
-  - name: Start MySql
-    service: name=mysql state=started
-    become_user: root
+  # - name: Install MySql
+  #   apt: name=mysql-server state=present
+  #   become_user: root
+  # - name: Start MySql
+  #   service: name=mysql state=started
+  #   become_user: root
